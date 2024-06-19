@@ -13,6 +13,7 @@ TEAM_NAME = "python-ai"
 HEX_CODE = "#86E6FA"
 # ###### #
 
+NAV_ANSW = "detsombetyrnoe.no"
 
 class MyParticipant(quiz_rapid.QuizParticipant):
     def __init__(self):
@@ -23,14 +24,14 @@ class MyParticipant(quiz_rapid.QuizParticipant):
             self.handle_register_team(question)
 
         if question.category == "NAV":
-            self.publish_answer(question_id="9c0e5f1d-c90e-4366-b3f6-7cf8ee1dbddb", category=question.category,
+            self.publish_answer(question_id=question.messageId, category=question.category,
                                 answer="detsombetyrnoe.no")
         
         if question.category == "arithmetic":
             pass
 
         if question.category == "ping-pong":
-            self.publish_answer(question_id="fabd13f6-52a3-438a-944a-d20caa057f40", category = question.category, answer= "pong")
+            self.publish_answer(question_id=question.messageId, category = question.category, answer= "pong")
 
         
             
