@@ -33,6 +33,7 @@ class MyParticipant(quiz_rapid.QuizParticipant):
             question_id=question.messageId, category=question.category, answer=HEX_CODE
         )
 
+
 def main():
     rapid = quiz_rapid.QuizRapid(
         team_name=TEAM_NAME,
