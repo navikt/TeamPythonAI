@@ -8,9 +8,9 @@ from client_lib import quiz_rapid
 
 # Config #
 # 1. Set `TEAM_NAME` to your preferred team name
-TEAM_NAME = "CHANGE ME"
+TEAM_NAME = "python-ai"
 # 2. Set `HEX_CODE` to your preferred team color
-HEX_CODE = "CHANGE ME"
+HEX_CODE = "#86E6FA"
 # ###### #
 
 
@@ -29,8 +29,9 @@ class MyParticipant(quiz_rapid.QuizParticipant):
 
     def handle_register_team(self, question: quiz_rapid.Question):
         # Add code here to solve the first question! Hint: Check Readme 😎
-        
-
+        self.publish_answer(
+            question_id=question.messageId, category=question.category, answer=HEX_CODE
+        )
 
 def main():
     rapid = quiz_rapid.QuizRapid(
