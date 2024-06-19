@@ -1,7 +1,7 @@
 apiVersion: nais.io/v1alpha1
 kind: Application
 metadata:
-  name: <YOUR_TEAM_NAME> # ENDRE DETTE! Dette vil være navnet på applikasjonen din
+  name: teampythonai # ENDRE DETTE! Dette vil være navnet på applikasjonen din
   namespace: leesah-quiz
   labels:
     team: leesah-quiz
