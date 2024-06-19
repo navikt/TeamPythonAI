@@ -24,12 +24,15 @@ class MyParticipant(quiz_rapid.QuizParticipant):
             self.handle_register_team(question)
 
         if question.category == "NAV":
-            for ans in NAV_ANSW:
                 self.publish_answer(question_id=question.messageId, category=question.category,
-                                answer=ans)
+                                answer="detsombetyrnoe.no")
+                self.publish_answer(question_id=question.messageId, category=question.category,
+                                answer="NAIS")
+                
         
         if question.category == "arithmetic":
-            pass
+            msg = question.messageId.split(" ")
+            # self.publish_answer(question_id = question.messageId, category = question.category, answer = question)
 
         if question.category == "ping-pong":
             self.publish_answer(question_id=question.messageId, category = question.category, answer= "pong")
